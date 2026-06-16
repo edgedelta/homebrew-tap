@@ -6,20 +6,20 @@ tools on **macOS and Linux** (Intel and Apple Silicon / arm64).
 ## Install
 
 ```bash
-brew install edgedelta/pack/edx
+brew install edgedelta/tap/edx
 ```
 
 Or tap first, then install:
 
 ```bash
-brew tap edgedelta/pack
+brew tap edgedelta/tap
 brew install edx
 ```
 
 Or with a `Brewfile`:
 
 ```ruby
-tap "edgedelta/pack"
+tap "edgedelta/tap"
 brew "edx"
 ```
 
@@ -34,7 +34,7 @@ brew upgrade edx
 
 ```bash
 brew uninstall edx
-brew untap edgedelta/pack
+brew untap edgedelta/tap
 ```
 
 ## Available formulae
