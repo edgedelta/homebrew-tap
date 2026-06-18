@@ -5,21 +5,21 @@
 class Edx < Formula
   desc "Edge Delta command-line interface"
   homepage "https://github.com/edgedelta/edx"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/edgedelta/edx/releases/download/v0.2.0/edx_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "140bdb4b470b60314fcfbdcb0ca67d16d2b19e1021720edadde70c97bec96679"
+      url "https://github.com/edgedelta/edx/releases/download/v0.3.0/edx_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "c0bd9b4ae9355e0f0ecf73679c5090b77e6b31595dcb8eef7d854b52414363ad"
 
       define_method(:install) do
         bin.install "edx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/edgedelta/edx/releases/download/v0.2.0/edx_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "429a1b387b43571244bd118e726216f50e6653956577e5b2d6e71361e757e36f"
+      url "https://github.com/edgedelta/edx/releases/download/v0.3.0/edx_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "6f8e524114e3535178849484263c99a61c37ff7ec1ef6789747d2a3d217530dd"
 
       define_method(:install) do
         bin.install "edx"
@@ -29,15 +29,15 @@ class Edx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgedelta/edx/releases/download/v0.2.0/edx_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "cd7f282f7c650d87bb42ac15606b77a5435c66eb53381264e79e795023489d09"
+      url "https://github.com/edgedelta/edx/releases/download/v0.3.0/edx_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "6a8a2f0b61be567b5fd46ecbaaa81a2d8658984c53b46d9f7baded41fce722f5"
       define_method(:install) do
         bin.install "edx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgedelta/edx/releases/download/v0.2.0/edx_0.2.0_Linux_arm64.tar.gz"
-      sha256 "9d9d5c32a146e2249b6af411303c5d365a5dba873b2d29f4bf6b50a5afe896d1"
+      url "https://github.com/edgedelta/edx/releases/download/v0.3.0/edx_0.3.0_Linux_arm64.tar.gz"
+      sha256 "1800bcd84d9546b229ddc0aa4814031b64fffde61df356f225be49fc20ab779b"
       define_method(:install) do
         bin.install "edx"
       end
