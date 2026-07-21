@@ -5,21 +5,21 @@
 class Edx < Formula
   desc "Edge Delta command-line interface"
   homepage "https://github.com/edgedelta/edx"
-  version "0.11.0"
+  version "0.12.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/edgedelta/edx/releases/download/v0.11.0/edx_0.11.0_Darwin_x86_64.tar.gz"
-      sha256 "e723ec1f1c07abb1ae0b1e6b25c998918710032b827ef8bd43daac41124461a6"
+      url "https://github.com/edgedelta/edx/releases/download/v0.12.0/edx_0.12.0_Darwin_x86_64.tar.gz"
+      sha256 "13ec06a31ef613fd0a7f2e514521eb81a4b9b0b778faaddce07fd7e2ea825119"
 
       define_method(:install) do
         bin.install "edx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/edgedelta/edx/releases/download/v0.11.0/edx_0.11.0_Darwin_arm64.tar.gz"
-      sha256 "9de382dbdbf1f86da2856d1354365794cf0f6ef6e82bd018df7a9e9223fc89e0"
+      url "https://github.com/edgedelta/edx/releases/download/v0.12.0/edx_0.12.0_Darwin_arm64.tar.gz"
+      sha256 "b05e857d9e7af68a506ddca90d3f81d24c502414d3cb8436de1db37fe9dd3a12"
 
       define_method(:install) do
         bin.install "edx"
@@ -29,15 +29,15 @@ class Edx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgedelta/edx/releases/download/v0.11.0/edx_0.11.0_Linux_x86_64.tar.gz"
-      sha256 "53a3efed5d8dbca91342af7db759a815b88b635b2fd04516c6f094727c7bf591"
+      url "https://github.com/edgedelta/edx/releases/download/v0.12.0/edx_0.12.0_Linux_x86_64.tar.gz"
+      sha256 "da51d6b7b243749d04be47a668822d56f3eb3d6e9e79671fb724bffe00dba235"
       define_method(:install) do
         bin.install "edx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgedelta/edx/releases/download/v0.11.0/edx_0.11.0_Linux_arm64.tar.gz"
-      sha256 "fccda9e1e5fca182be241e0f20eb761daf1e3b7e389c6c768a05f5ecb5387081"
+      url "https://github.com/edgedelta/edx/releases/download/v0.12.0/edx_0.12.0_Linux_arm64.tar.gz"
+      sha256 "97d64da0bda606078b52f26952b7d1845b6b2eb96c70764f37ccd4a6f065fb89"
       define_method(:install) do
         bin.install "edx"
       end
