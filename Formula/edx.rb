@@ -5,21 +5,21 @@
 class Edx < Formula
   desc "Edge Delta command-line interface"
   homepage "https://github.com/edgedelta/edx"
-  version "0.18.1"
+  version "0.19.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/edgedelta/edx/releases/download/v0.18.1/edx_0.18.1_Darwin_x86_64.tar.gz"
-      sha256 "279769c85f8d6731f8f88085ff36624bdec07d75caab6160e697374062179470"
+      url "https://github.com/edgedelta/edx/releases/download/v0.19.0/edx_0.19.0_Darwin_x86_64.tar.gz"
+      sha256 "c6b9936d3078349a3e16269c5931fe06026bab099286070eb2829560b0906310"
 
       define_method(:install) do
         bin.install "edx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/edgedelta/edx/releases/download/v0.18.1/edx_0.18.1_Darwin_arm64.tar.gz"
-      sha256 "340759ce0d39c5d5cc24fda557542b75c646b5c3e15acf6b77f8687ac8b3222b"
+      url "https://github.com/edgedelta/edx/releases/download/v0.19.0/edx_0.19.0_Darwin_arm64.tar.gz"
+      sha256 "f5c99496ce4d0465566264cf353597ff8a7b48bd1b382c80876aaf26662255d4"
 
       define_method(:install) do
         bin.install "edx"
@@ -29,15 +29,15 @@ class Edx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgedelta/edx/releases/download/v0.18.1/edx_0.18.1_Linux_x86_64.tar.gz"
-      sha256 "35d8031ab5a6f1ac61dcf320287391d57b4e74b20603043031320217c10059b5"
+      url "https://github.com/edgedelta/edx/releases/download/v0.19.0/edx_0.19.0_Linux_x86_64.tar.gz"
+      sha256 "ee9e67cd6df31baad20adc7094e643edc5d49930f001a5f24c3a26b8586f9a26"
       define_method(:install) do
         bin.install "edx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgedelta/edx/releases/download/v0.18.1/edx_0.18.1_Linux_arm64.tar.gz"
-      sha256 "6205433656f8819c68d7237f6f1dd9885e128f9ec28e14ae32e0737e74515f02"
+      url "https://github.com/edgedelta/edx/releases/download/v0.19.0/edx_0.19.0_Linux_arm64.tar.gz"
+      sha256 "0d3ea609b67386ce45f41a2393017bf164aa9067b0b807e70a2f94f272f89a23"
       define_method(:install) do
         bin.install "edx"
       end
@@ -51,6 +51,10 @@ class Edx < Formula
       Get started:
         edx auth login      # sign in (opens your browser)
         edx --help          # explore commands
+
+      On first run, edx offers to install agent skills for the coding
+      assistants on this machine. Or install them any time:
+        edx skills install
 
       Docs: https://github.com/edgedelta/edx
     EOS
